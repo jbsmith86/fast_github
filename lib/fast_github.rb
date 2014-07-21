@@ -1,5 +1,9 @@
 require "fast_github/version"
 
 module FastGithub
-  # Your code goes here...
+  class Test
+    def say_hello
+      puts 'This is fast github. Coming in loud and clear. Over.'
+    end
+  end
 end

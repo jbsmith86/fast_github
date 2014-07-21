@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'fast_github'
+
+chatter = FastGithub::Test.new
+chatter.say_hello
