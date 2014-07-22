@@ -2,5 +2,13 @@
 
 require 'fast_github'
 
-chatter = FastGithub::Test.new
-chatter.say_hello
+auth = FastGithub::Auth.new
+print "Enter a Github repository name (leave blank to use current folder name): "
+github_name = gets.chomp
+repo = FastGithub::Repo.new(auth.token, github_name.chomp)
+print "Do you want to create a repo named \"#{repo.remote_name}\" from folder \"#{repo.directory}\"? (Y,n): "
+confirm = gets.chomp
+if confirm.chomp.upcase == "Y" || confirm.chomp == ""
+  repo.create
+  repo.upload
+end
