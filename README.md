@@ -1,24 +1,35 @@
-# FastGithub
+# Fast Github
 
-TODO: Write a gem description
+Upload your projects to Github in a snap! Start a new project, run Fast Github and go. That's all there is to it.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'fast_github'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install the Fast Github gem globally so it can be ran anywhere on your system
 
     $ gem install fast_github
 
+Make sure you have done the following before you upload a repo:
+
+* [Install Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+* [Add SSH Key to Github](https://help.github.com/articles/generating-ssh-keys)
+
 ## Usage
 
-TODO: Write usage instructions here
+Change directories into the directory you wish to upload to Github
+
+```
+cd ~/myproject
+```
+
+Run the Fast Github binary from the directory
+
+```
+$ fast_github
+```
+
+It will prompt you for your github credentials and ask you to confirm you want to add this directory to Github.
+
+That's it! You're done.
 
 ## Contributing
 
