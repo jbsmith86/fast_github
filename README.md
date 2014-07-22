@@ -22,7 +22,7 @@ Change directories into the directory you wish to upload to Github
 cd ~/myproject
 ```
 
-Run the Fast Github binary from the directory
+Run the Fast Github binary from inside the directory
 
 ```
 $ fast_github
