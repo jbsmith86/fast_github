@@ -1,5 +1,5 @@
 # Fast Github
-Upload your projects to Github in a snap!  
+Upload your projects to Github in a snap!
 
 Start a new project, run Fast Github and go. That's all there is to it.
 
@@ -34,7 +34,9 @@ Run the Fast Github binary from inside the directory
 $ fast_github
 ```
 
-It will prompt you for your github credentials and ask you to confirm you want to add this directory to Github.
+It will prompt you for your github credentials and authenticate via Github API v3 OAuth. You will only have to sign in once.
+
+Next it will ask you for a name for your new Github repo and confirm the folder you wish to upload is correct.
 
 That's it! You're done.
 
