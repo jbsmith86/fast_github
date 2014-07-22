@@ -81,7 +81,7 @@ module FastGithub
         Dir.chdir @directory
         puts `git init`
         puts `git add -A .`
-        puts `git commit -m "Initial commit"`
+        puts `git commit -a -m "Initial commit"`
       end
     end
 

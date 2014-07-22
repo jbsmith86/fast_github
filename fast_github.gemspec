@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["joel@trosic.com"]
   spec.summary       = "Fast Github does the initial setup of a new Github repo for you."
   spec.description   = "Upload your projects to Github in a snap! Start a new project, run Fast Github and go. That's all there is to it."
-  spec.homepage      = "http://rubygems.org/gems/fast_github"
+  spec.homepage      = "http://www.github.com/jbsmith86/fast_github"
   spec.license       = "BSD-3-Clause-Clear"
 
   spec.files         = `git ls-files -z`.split("\x0")
