@@ -9,7 +9,6 @@ _yardoc
 coverage
 doc/
 lib/bundler/man
-lib/clientsecret
 pkg
 rdoc
 spec/reports

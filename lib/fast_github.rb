@@ -1,7 +1,9 @@
 require "fast_github/version"
+require "io/console"
 require "net/http"
 require "uri"
 require "json"
+require 'yaml'
 
 module FastGithub
   class Auth
@@ -42,20 +44,20 @@ module FastGithub
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       request = Net::HTTP::Put.new(uri.request_uri)
-      puts "Enter your Github username: "
+      print "Enter your Github username: "
       user = gets.chomp
-      puts "Enter your Github password: "
-      pass = gets.chomp
+      print "Enter your Github password: "
+      pass = STDIN.noecho(&:gets).chomp
+      puts ""
       request.basic_auth(user.chomp, pass.chomp)
-      secret = File.open('clientsecret', &:readline).chomp
-      request.body = { "client_secret" => secret, "scopes" => [ "repo" ] }.to_json
+      request.body = { "client_secret" => "2e05ca092118ef4df3c5089717a0bf8cfe1192f1", "scopes" => [ "repo" ] }.to_json
       response = http.request(request)
-      if response.code == 200 || response.code == 201
+      if response.code == "200" || response.code == "201"
         json_response = JSON.parse(response.body)
         save_oath(json_response['token'])
         @token = json_response['token']
       else
-        raise "Error contacting Github API"
+        raise "Error connecting to Github API"
       end
     end
   end
