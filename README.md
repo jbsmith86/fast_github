@@ -1,6 +1,7 @@
 # Fast Github
+Upload your projects to Github in a snap!  
 
-Upload your projects to Github in a snap! Start a new project, run Fast Github and go. That's all there is to it.
+Start a new project, run Fast Github and go. That's all there is to it.
 
 ## Installation
 
