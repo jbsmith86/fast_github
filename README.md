@@ -4,8 +4,14 @@ Upload your projects to Github in a snap!
 Start a new project, run Fast Github and go. That's all there is to it.
 
 ## Installation
+**Fast Github is for OSX and Linux/Unix only**
 
-Install the Fast Github gem globally so it can be ran anywhere on your system
+Make sure you have Ruby installed on your system:
+```
+ruby --version
+```
+
+Install the Fast Github gem globally so it can be ran anywhere:
 
     $ gem install fast_github
 
@@ -34,7 +40,7 @@ That's it! You're done.
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/fast_github/fork )
+1. Fork it ( http://github.com/jbsmith86/fast_github/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
