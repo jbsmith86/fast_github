@@ -3,7 +3,6 @@ require "io/console"
 require "net/http"
 require "uri"
 require "json"
-require 'yaml'
 
 module FastGithub
   class Auth
@@ -50,7 +49,8 @@ module FastGithub
       pass = STDIN.noecho(&:gets).chomp
       puts ""
       request.basic_auth(user.chomp, pass.chomp)
-      request.body = { "client_secret" => "2e05ca092118ef4df3c5089717a0bf8cfe1192f1", "scopes" => [ "repo" ] }.to_json
+      client_secret = File.open(File.dirname(__FILE__) + "/client_secret", &:readline).chomp
+      request.body = { "client_secret" => client_secret, "scopes" => [ "repo" ] }.to_json
       response = http.request(request)
       if response.code == "200" || response.code == "201"
         json_response = JSON.parse(response.body)
