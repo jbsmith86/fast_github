@@ -42,7 +42,9 @@ That's it! You're done.
 
 ## Using the source code
 
-If you wish to modify the source code in order to contact the Github API you must [register your own Github application](https://github.com/settings/applications/new). After you've done that, change the request oauth uri to https://api.github.com/authorizations/clients/clientid and put the client secret in a file called "client_secret" in the top directory.
+If you wish to modify the source code in order to contact the Github API you must [register your own Github application](https://github.com/settings/applications/new). 
+
+After you've done that, change the request oauth uri to https://api.github.com/authorizations/clients/clientid and put the client secret in a file called "client_secret" in the top directory.
 
 ## Contributing
 
