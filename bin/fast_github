@@ -11,4 +11,11 @@ confirm = gets.chomp
 if confirm.chomp.upcase == "Y" || confirm.chomp == ""
   repo.create
   repo.upload
+  if repo.upload_response == 'Failed'
+    auth.request_oauth
+    repo.upload
+    if repo.upload_response == 'Failed'
+      raise "Could not login to Github"
+    end
+  end
 end

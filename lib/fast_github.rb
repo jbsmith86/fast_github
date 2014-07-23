@@ -63,11 +63,12 @@ module FastGithub
   end
 
   class Repo
-    attr_accessor :directory, :remote_name
+    attr_accessor :directory, :remote_name, :upload_response
 
     def initialize(token, remote_name=nil, dir=Dir.pwd)
       @token = token
       @directory = dir
+      @upload_response = ''
       if remote_name && !remote_name.empty?
         @remote_name = remote_name
       else
@@ -93,6 +94,12 @@ module FastGithub
       request["Authorization"] = "token #{@token}"
       request.body = { "name" => @remote_name }.to_json
       response = http.request(request)
+      if response.code[0] == "2"
+        @upload_response == 'Success'
+      else
+        @upload_response == 'Failed'
+        return
+      end
       repo_fullname = (JSON.parse response.body)['full_name']
       puts `git remote add origin git@github.com:#{repo_fullname}.git`
       puts `git push -u origin master`
