@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/fast_github.svg)](http://badge.fury.io/rb/fast_github)
 # Fast Github
 Upload your projects to Github in a snap!
 
